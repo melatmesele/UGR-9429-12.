@@ -1,0 +1,411 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-image:url("../images/award-image.jpg");
+    background-size:cover;
+    background-attachment:fixed;
+}
+.all{
+    display:grid;
+    grid-template-rows: auto 70em 15em ;
+    grid-template-columns: minmax(25em , 1fr)  ;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer" ;
+}
+header{
+    grid-area:header;
+}
+main{
+    grid-area:main;
+}
+
+footer{
+    grid-area:footer;
+    background-color:black;
+}
+
+
+
+nav ul{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    text-decoration:none;
+}
+nav ul li{
+    display:inline-block;
+    
+    padding:0em 0.5em;
+    margin:0em 0em;
+
+    list-style:none;
+    
+} 
+li{
+    font-size:30px;
+    line-height:60px;
+}
+nav ul li a{
+    text-decoration:none;
+    font-weight:bold;
+    font-size:30px;
+}
+nav ul li a:link{
+    color:darkslateblue;
+}
+nav ul li a:visited{
+    color:white;
+}
+nav ul li a:hover{
+    color:blue;
+}
+nav ul li a:active{
+    color:darksalmon;
+}
+#search{
+    border-radius: 10px;
+    margin:1em 1em;
+
+}
+.searchbutton{
+    margin:0em -1em;
+
+
+}
+
+/*
+.checkbox{
+    font-size:30px;
+    color:black;
+    float:left;
+    margin:0px 0px;
+}
+.menu{
+    width:30px;
+    float:left;
+    margin:25px  5px;
+    display:none;
+}
+#checkbutton{
+    display:none;
+}
+*/
+.table1{
+    top:48%;
+    position: absolute;
+    width:951px;
+    height:319px;
+    left:10%;
+    border:2px solid lightsalmon;
+}
+.table1 tr{
+    transition:all  .2s ease-in;
+    cursor:pointer;
+}
+.table1 tr:hover{
+    background-color: lightsalmon;
+    transform: scale(1.1);
+}
+.head1{
+    
+    
+    word-spacing: 0px;
+    font-size: 32px;
+    width:max-content;
+    line-height:38px;
+    
+    text-align:left;
+
+
+}
+
+
+.certificate1{
+    width:72%;
+    float:left;
+    
+}
+
+
+.table1 tr{
+    transition:all  .2s ease-in;
+    cursor:pointer;
+}
+.table1 tr:hover{
+    background-color: lightsalmon;
+    transform: scale(1.1);
+}
+.table2{
+    top:105%;
+    position: absolute;
+    width:842px;
+    height:319px;
+    left:10%;
+    border:2px solid limegreen;
+    border-bottom-right-radius: 174px;
+    border-top-right-radius: 174px;
+}
+.certificate2{
+    width:61%;
+    float:left;
+    
+}
+.table2 {
+    transition:all  .2s ease-in;
+    cursor:pointer;
+}
+.table2 :hover{
+    
+    transform: scale(1.02);
+}
+.head2{
+    
+    
+    word-spacing: 0px;
+    font-size: 32px;
+    width:max-content;
+    line-height:38px;
+    
+    text-align:left;
+
+
+}
+
+.award1,.award2,.award3 ,.award4,.award5{
+    width:37%;
+}
+
+table.table3{
+    
+    position:absolute;
+    left:2%;
+    top:166%;
+    border:2px solid lightseagreen;
+    width:800px;
+    height:200px;
+    border-collapse: collapse;
+    
+}
+ .table3 tr{
+    transition:all  .2s ease-in;
+    cursor:pointer;
+}
+ .table3 th,td{
+    padding-top:10px;
+    border-bottom-style:outset;
+}
+.table3 td.data{
+    text-align:left;
+    margin-left: 2px;
+    font-size:23px;
+}
+
+#row{
+    background-color: mediumslateblue;
+}
+.table3 tr:hover{
+    background-color: mediumturquoise;
+    transform: scale(1.1);
+}
+h1{
+    text-align:center;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    margin-top:144px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.media-icons img{
+    height:30px;
+    margin:20px;
+    cursor:pointer;
+    align-items:center;
+    border:1px solid;
+    border-radius:50%;
+    
+
+}
+.media-icons{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+}
+/*
+@media screen and (max-width:1024px){
+    .all{
+        grid-template-rows: auto 95em 5em ;
+        grid-template-columns: minmax(74em , 1fr)  ;
+    }
+    nav ul li a{
+       font-size:26px;
+    }
+    .table1{
+    left:4%;
+    }
+   
+   
+  
+}
+@media screen and (max-width:425px){
+    nav ul li a{
+        font-size:30px;
+     }
+     .table3 td.data{
+         font-size:35px;
+     }
+}
+@media screen and (max-width:320px){
+    .all{
+        grid-template-rows: 15em 180em 15em ;
+        grid-template-columns: minmax(79em , 1fr)  ;
+    }
+    nav ul li a:link{
+        font-size: 36px;
+        letter-spacing: 1px;
+    }
+}*/
+@media screen and (min-width:400px){
+
+    nav ul li {
+        flex:none;
+    } 
+    nav ul {
+        flex-wrap: wrap;
+    }
+      nav ul{
+          justify-content: center;
+      } 
+      .table1{
+        
+        width:400px;
+        height:200px;
+        
+        
+    }
+      .certificate1{
+          float:left;
+          width:100%;
+      }
+      .head1{
+    
+    
+        
+        
+        width:max-content;
+        line-height:18px;
+        font-size:smaller;
+        text-align:left;
+    }
+    .table2{
+        top:70%;
+        width:400px;
+        height:200px;
+    }
+    .certificate2{
+        width:50%;
+        float:left;
+        
+    }
+    .head2{
+    
+    
+        
+        font-size:medium;
+        width:max-content;
+        line-height:18px;
+        
+        text-align:left;
+    
+    
+    }
+    h1{
+        font-size: 19px;
+        
+    }
+    table.table3{
+    
+        position:absolute;
+        left:5%;
+        top:93%;
+        border:2px solid lightseagreen;
+        width:300px;
+        height:150px;
+        border-collapse: collapse;
+        
+    }
+    .table3 td.data{
+        text-align:left;
+        margin-left:0em;
+        font-size:23px;
+    }
+
+
+    
+    }
+    @media screen and (min-width:600px){
+
+        h1{
+            
+            font-size: 20px;
+            top:10%;
+            position:absolute;
+            left:5%;
+        }
+        
+          .table1{
+            
+         top:34%;
+        }
+        .table2{
+            
+            top:58%;
+           }
+        table.table3{
+            top:80%;
+            
+        }
+
+    }
+    @media screen and (min-width:1200px){
+
+        h1{
+            
+           
+            top:10%;
+            position:absolute;
+            left:35%;
+        }
+        
+          .table2{
+          width: 500px; 
+         left:54%;
+        }
+        table.table3{
+            top:75%;
+            width: 400px; 
+            height:200px;
+
+        }
+        .table1{
+            width:600px;
+            height:200px;
+        }
+        .head1{
+            
+            font-size:large;
+            text-align:left;
+        }
+    }

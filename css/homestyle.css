@@ -1,0 +1,557 @@
+
+*{
+    box-sizing:border-box;
+}
+body{
+    background-image: url("../images/home.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+  
+}
+.all{
+    display:grid;
+    grid-template-rows: auto 70em 15em ;
+    grid-template-columns: minmax(25em , 1fr)  ;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer" ;
+}
+header{
+    grid-area:header;
+}
+main{
+    grid-area:main;
+}
+
+footer{
+    grid-area:footer;
+    background-color:black;
+}
+   
+
+
+nav ul{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    text-decoration:none;
+  
+    
+}
+
+nav ul li{
+    display:inline-block;
+    
+    padding:0em 0.5em;
+    margin:0em 0em;
+    
+    list-style:none;
+    
+} 
+li{
+    font-size:30px;
+    line-height:60px;
+}
+nav ul li a{
+    text-decoration:none;
+    font-weight:bold;
+    font-size:30px;
+    
+}
+nav ul li a:link{
+    color:darkslateblue;
+}
+nav ul li a:visited{
+    color:white;
+}
+nav ul li a:hover{
+    color:blue;
+}
+nav ul li a:active{
+    color:darksalmon;}
+
+
+/*.checkbox{
+    font-size:30px;
+    color:black;
+    float:left;
+    margin:0px 0px;
+}
+#checkbutton{
+    display:none;
+}
+
+.menu{
+    width:30px;
+    float:left;
+    margin:25px  5px;
+    display:none;
+}*/
+
+
+
+
+
+
+
+.myphoto {
+    
+    float:left;
+    position:absolute;
+    width:30%;
+    border-radius:50%;
+    transition:width 2s ;
+    margin:15em 15em;
+    
+    
+
+}
+.myphoto:hover{
+    width:35%;
+}
+
+
+
+span{
+    color:darkblue;
+    font-weight:bold;
+    letter-spacing: 3px;
+}
+
+
+.contents{
+    margin-left:45em;
+    margin-top:20em;
+    position:absolute;
+    font:italic bolder 120% serif;
+    word-spacing:3.5px;
+    line-height:1em;
+    display:inline-block;
+    letter-spacing:3px;
+}
+.photo{
+    width:15%;
+    float:left;
+    position:absolute;
+    border-radius:25% 15% 10% 10%;
+    transition:width 2s;
+    margin:45em 55em; 
+
+}
+.photo:hover{
+    width:20%;
+
+}
+.photo + p{
+    margin-left:63em;
+    margin-top: 40em;
+    position:absolute;
+    font:italic bolder 120% serif;
+    word-spacing:3.5px;
+    line-height:1em;
+    display:inline-block;
+}
+.media-icons{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+}
+
+.media-icons img{
+    height:30px;
+    margin:20px;
+    cursor:pointer;
+    align-items:center;
+    border:1px solid;
+    border-radius:50%;
+    
+    
+
+}
+/*
+
+  
+@media screen and (max-width:1024px){
+    
+    .all{
+        grid-template-rows: auto 95em 5em ;
+        
+        grid-template-columns: minmax(74em , 1fr)  ;
+    }
+    nav ul li a{
+       font-size:26px;
+    }
+    .myphoto{
+          width:30%;
+          transition: width 2s;
+          margin:1em 5em;
+    }
+    .myphoto:hover{
+        width:35%;
+    }
+    .contents{
+        margin-left: 25em;
+        margin-top:5em;
+        font-weight:bolder;
+        color:black;
+        font-size:140%;
+    }
+   
+    
+    .photo{
+        margin:30em 35em;
+        width:20%;
+        transition: width 2s;
+    }
+    .photo:hover{
+        width:25%;
+    }
+    .photo + p{
+        margin:21em 37em;
+        word-spacing: 4px;
+        color:blueviolet;
+        font-size: 150%;
+    }
+}
+@media screen and (max-width:768px){
+    nav ul li a{
+       font-size:26px;
+    }
+    .myphoto{
+          width:50%;
+          transition: width 2s;
+    }
+    .myphoto:hover{
+        width:55%;
+    }
+    .contents{
+        margin-left: 23em;
+        margin-top:5em;
+        font-weight:bolder;
+    }
+    .all{
+        grid-template-rows: auto 60em 8em ;
+        grid-template-columns: minmax(63em , 1fr)  ;
+    }
+    .photo{
+        width:30%;
+        margin:28em 26em;
+    }
+    .photo + p{
+        margin: 19em 29em;
+        color:navy;
+  
+    }
+
+    
+}
+@media screen and (max-width:540px){
+     .all{
+        grid-template-rows: auto 70em 8em ;
+        grid-template-columns: minmax(63em , 1fr)  ;
+    }
+
+
+}
+
+@media screen and (max-width:425px){
+    .all{
+        grid-template-rows: auto 104em 15em ;
+        grid-template-columns: minmax(63em , 1fr)  ;
+    }
+    nav ul li a:link{
+        font-size:36px;
+    }
+    li{
+        line-height:60px;
+    }
+  
+    .myphoto{
+          width:90%;
+          transition: width 2s;
+          margin:13em 10em;
+    }
+    .myphoto:hover{
+        width:95%;
+    }
+    .contents{
+        margin-left: 21em;
+        margin-top:10em;
+        font-weight:bolder;
+        font-size:29px;
+        color:white;
+        letter-spacing:1px;
+    }
+    span{
+        color:chartreuse;
+    }
+    .photo{
+        margin: 60em 10em;
+        width:90%;
+        transition:width 2s;
+    }
+    .photo:hover{
+        width:95%;
+    }
+    .photo + p{
+        margin: 26em 16em;
+        font-size: 248%;
+    }
+}
+@media screen and (max-width:375px){
+    .all{
+        grid-template-rows: auto 121em 15em ;
+        grid-template-columns: minmax(63em , 1fr)  ;
+    }
+    nav ul li a{
+       font-size:26px;
+      
+    }
+    .myphoto{
+          width:85%;
+          transition: width 2s;
+          margin:15em 14em;
+    }
+    .myphoto:hover{
+        width:90%;
+    }
+    .contents{
+        margin-left:19em;
+        margin-top:10em;
+        font-size:200%;
+        font-weight:bolder;
+        color:white;
+        letter-spacing:3px;
+    }
+    span{
+        color:gold;
+    }
+   
+   .photo{
+
+        margin:62em 12em;
+        transition: width 2s;
+        width:90%;
+    }
+    .photo:hover{
+        width:95%;
+
+    }
+    .photo + p{
+        margin:25em 16em;
+        font-size:250%;
+        color:antiquewhite;
+
+    }
+    
+}
+
+@media screen and (max-width:320px){
+  
+    .all{
+        grid-template-rows: 15em 180em 15em ;
+        grid-template-columns: minmax(79em , 1fr)  ;
+    }
+    nav ul li a:link{
+        font-size: 36px;
+        letter-spacing:1px;
+    }
+    .myphoto{
+          width:150%;
+          transition: width 2s;
+          margin:12em 0em;
+    }
+    .myphoto:hover{
+        width:0%;
+    }
+    .contents{
+        margin-left: 13em;
+        margin-top:6em;
+        font-size:3em;
+        font-weight:bolder;
+        color:white;
+
+    }
+    
+    .photo{
+        margin:69em 4em;
+        transition: width 2s;
+        width:150%;
+
+    }
+    .photo:hover{
+        width:155%;
+    }
+    .photo +p{
+        margin:24em 13em;
+        font-size: 3em;
+    }
+
+
+    
+}
+*/
+@media screen and (min-width:400px){
+
+    nav ul li {
+        flex:none;
+    } 
+    nav ul {
+        flex-wrap: wrap;
+    }
+      nav ul{
+          justify-content: center;
+      } 
+    .myphoto{
+        float:left;
+        width:50%;
+        top:2%;
+        left:0em;
+    }
+    .contents{
+        margin-left:20em;
+
+    }
+
+
+
+
+    }
+    @media screen and (min-width:400px){
+
+        nav ul li {
+            flex:none;
+        } 
+        nav ul {
+            flex-wrap: wrap;
+        }
+          nav ul{
+              justify-content: center;
+          } 
+        .myphoto{
+            float:left;
+            width:30%;
+            top:2%;
+            
+        }
+        .contents{
+            margin-left:10em;
+            top:5%;
+            color:white;
+        }
+        .photo{
+            left:-150%;
+            width:30%;
+            top:1%;
+        }
+        .photo + p{
+            left:-205%;
+            top:12%;
+            color:white;
+            
+        }
+    }
+    @media screen and (min-width:600px){
+
+        
+        .photo + p{
+            left:-150%;
+            top:19%;
+            
+        }
+        .photo{
+            left:-100%;
+            width:30%;
+            top:1%;
+        }
+        .contents{
+            margin-left:10em;
+            top:9%;
+            color:white;
+        }
+
+    }
+    @media screen and (min-width:800px){
+
+        
+        .photo + p{
+            left:-100%;
+            top:25%;
+            
+        }
+        .photo{
+            left:-60%;
+            width:30%;
+            top:1%;
+        }
+        .contents{
+            margin-left:10em;
+            top:12%;
+            color:white;
+        }
+
+    }
+    @media screen and (min-width:1000px){
+
+        
+        .photo + p{
+            left:-100%;
+            top:5%;
+            
+        }
+        .photo{
+            left:-40%;
+            width:30%;
+            top:1%;
+        }
+        .contents{
+            margin-left:10em;
+            top:22%;
+            color:white;
+        }
+
+    }
+    @media screen and (min-width:1200px){
+
+        
+        .photo + p{
+            left:-70%;
+            top:9%;
+            
+        }
+        .photo{
+            left:-20%;
+            width:30%;
+            top:3%;
+        }
+        .contents{
+            
+            top:6%;
+            left:40%;
+            color:white;
+        }
+
+    }
+    @media screen and (min-width:1400px){
+
+        
+        .photo + p{
+            left:-60%;
+            top:3%;
+            font-size: 23px;
+            
+        }
+        .photo{
+            left:-2%;
+            width:25%;
+            top:1%;
+        }
+        .contents{
+            margin-left:10em;
+            top:12%;
+            color:white;
+        }
+
+    }

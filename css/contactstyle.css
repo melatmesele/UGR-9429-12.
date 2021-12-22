@@ -1,0 +1,466 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-image:url("../images/cont.jpg");
+    background-size:cover;
+    background-attachment:fixed;
+    font-family: 'Times New Roman', Times, serif;
+   
+}
+.all{
+    display:grid;
+    grid-template-rows: auto 100em 15em ;
+    grid-template-columns: minmax(35em , 40em) 70em ;
+    grid-template-areas:
+    "header header"
+    " aside main"
+    "footer footer" ;
+}
+header{
+    grid-area:header;
+}
+main{
+    grid-area:main;
+}
+aside{
+    grid-area:aside;
+}
+footer{
+    grid-area:footer;
+    background-color:black;
+}
+
+
+
+nav ul{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    text-decoration:none;
+}
+nav ul li{
+    display:inline-block;
+    
+    padding:0em 0.5em;
+    margin:0em 0em;
+
+    list-style:none;
+    
+} 
+li{
+    font-size:30px;
+    line-height:60px;
+}
+nav ul li a{
+    text-decoration:none;
+    font-weight:bold;
+    font-size:30px;
+}
+nav ul li a:link{
+    color:darkslateblue;
+}
+nav ul li a:visited{
+    color:white;
+}
+nav ul li a:hover{
+    color:blue;
+   
+}
+nav ul li a:active{
+    color:darksalmon;
+}
+.forms{
+    display:flex;
+    align-items: center;
+    justify-content:flex-start;
+    margin:14em 12em;
+}
+.groups{
+    margin-bottom:40px;
+    position:relative;
+    
+}
+textarea, input{
+    background:transparent;
+    width:100%;
+    border:2px solid chartreuse;
+    border-radius:10% ;
+    
+    
+   
+    font-size:20px;
+    color:darkblue;
+    padding:15px;
+    
+} 
+
+label{
+    height:100%;
+    position:absolute;
+    padding:15px;
+    color:darkcyan;
+    cursor:text;
+   left:0;
+  font-size: 24px;
+   transition: 0.2s;
+   
+}
+button{
+    color:darksalmon;
+    padding:10px 1px;
+    background:transparent;
+    border:2px solid burlywood;
+    cursor:pointer;
+    width:50%;
+    border-radius:10% ;
+    font-size: 20px;
+   
+}
+input:focus~label,
+input:valid~label
+
+{
+    top: -40px;
+    font-size: larger;
+}
+textarea:focus~label,
+textarea:valid~label{
+    top: -40px;
+    font-size: 24px;
+
+}
+.lists {
+   
+    margin:56em 6em;
+}
+.lists li{
+    font-size: 23px;
+    line-height: 25px;
+    margin-bottom:16px;
+    width:max-content;
+}
+span{
+    color:white;
+}
+h2{
+    margin:35em 2em;
+    width:max-content;
+    position: absolute;
+}
+
+/*.checkbox{
+    font-size:30px;
+    color:black;
+    float:left;
+    margin:0px 0px;
+}
+
+#checkbutton{
+    display:none;
+}
+*/
+.menu{
+    width:30px;
+    float:left;
+    margin:25px  5px;
+    display:none;
+}
+
+
+
+
+
+.media-icons img{
+    height:30px;
+    margin:20px;
+    cursor:pointer;
+    align-items:center;
+    border:1px solid;
+    border-radius:50%;
+    
+
+}
+.media-icons{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+}
+/*
+@media screen and (max-width:1024px){
+    /*nav ul li a{
+       font-size:26px;
+       margin-right:105px;
+    }
+    nav ul li{
+        margin-right:95px;
+    }
+   
+   
+    .all{
+        grid-template-rows: auto 100em 15em ;
+        grid-template-columns: minmax(35em , 40em) 70em ;
+    }
+    nav ul li a{
+        font-size:26px;
+
+    }
+    label{
+        font-size: 34px;
+    }
+    textarea:focus~label,
+    textarea:valid~label{
+    top: -46px;
+    font-size: 34px;
+
+}
+input:focus~label,
+input:valid~label
+
+{
+    top: -60px;
+    font-size: 34px;
+}
+.groups{
+    margin-bottom: 45px;
+}
+button{
+    font-size: 40px;
+}
+h2{
+    font-size: 43px;
+    margin:21em 1em;
+}
+.lists li{
+    font-size: 44px;
+    line-height: 46px;
+}
+.lists{
+    margin:62em 2em;
+}
+}
+@media screen and (max-width:768px){
+    nav ul li a{
+       font-size:26px;
+    }
+    
+    .all{
+        grid-template-rows: auto 126em 5em ;
+        grid-template-columns: minmax(35em , 40em) 89em ;
+    }
+    .forms{
+        margin:18em 14em;
+    }
+    .groups{
+        margin-bottom: 65px;
+    }
+    textarea,input{
+        font-size: 35px;
+    }
+    label{
+        font-size: 44px;
+    }
+    input:focus~label,
+    input:valid~label
+
+{
+    top: -70px;
+    font-size: 44px;
+}
+}
+@media screen and (max-width:540px){
+    .all{
+        grid-template-rows: auto 153em 5em ;
+        grid-template-columns: minmax(35em , 40em) 70em ;
+   }
+
+
+}
+@media screen and (max-width:425px){
+    .all{
+        grid-template-rows: auto 199em 5em ;
+        grid-template-columns: minmax(48em , 55em) 59em ;
+    }
+    .groups{
+        margin-bottom: 109px;
+    }
+    .forms{
+        margin: 23em 2em;
+        width:75%;
+    }
+    textarea,input{
+        font-size: 90px;
+    }
+    label{
+        font-size: 103px;
+    }
+    textarea:focus~label,
+    textarea:valid~label{
+    top: -101px;
+    font-size: 89px;
+}
+input:focus~label,
+    input:valid~label{
+    top: -110px;
+    font-size: 94px;
+}
+h2{
+    font-size: 72px;
+    margin:26em 0.2em;
+}
+.lists{
+    margin:127em 2em;
+}
+.lists li{
+    font-size: 64px;
+    line-height: 90px;
+}
+button{
+    font-size: 71px;
+}
+ul li a:link{
+    font-size: 34px;
+
+}
+
+
+}
+@media screen and (max-width:375px){
+    .all{
+        grid-template-rows: auto 199em 5em ;
+        grid-template-columns: minmax(47em , 50em) 48em ;
+    }
+   
+    ul li a:link{
+        font-size: 57px;
+    }
+}
+@media screen and (max-width:320px){
+  
+    .all{
+        grid-template-rows: 15em 180em 15em ;
+        grid-template-columns: minmax(36em ,43em)  48em;
+    }
+    nav ul li a:link{
+        font-size: 36px;
+    }
+    h2{
+        margin:11em 2.2em;
+        width:75%;
+    }
+   .lists{
+       margin: 75em 2em;
+   }
+   .lists li{
+       font-size: 46px;
+       width:min-content;
+   }
+}
+*/
+
+
+@media screen and (min-width:940px){
+    .all{
+        display:grid;
+        grid-template-columns: minmax(2px ,3px);
+        grid-template-rows: auto min-height 5em;
+        grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
+        max-width:1400px;
+        margin: 0 auto;
+        position:relative;
+    }
+    header{
+        grid-area:header;
+    }
+    main{
+        grid-area: main;
+    }
+    aside{
+        grid-area:aside;
+        background-color: thistle;
+        padding:1em;
+        padding-left:45px;
+    }
+    footer{
+        grid-area:footer;
+    }
+    nav ul {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (min-width:940px){
+
+    .all{
+        display:grid;
+        grid-template-columns: minmax(25em ,1fr);
+        grid-template-rows: auto min-height 5em;
+        grid-template-areas: 
+        "header header"
+        "aside main"
+        "footer footer";
+        max-width:1400px;
+        margin: 0 auto;
+        position:relative;
+    }
+    header{
+        grid-area:header;
+    }
+    main{
+        grid-area: main;
+    }
+    aside{
+        grid-area:aside;
+        background-color: thistle;
+        padding:1em;
+        padding-left:45px;
+    }
+    footer{
+        grid-area:footer;
+    }
+    nav ul {
+        flex-wrap: wrap;
+    }
+    textarea, input{
+        
+        width:130%;
+        font-size:15px;
+        color:darkblue;
+        padding:15px;
+        
+    }
+    label{
+        height:100%;
+        
+        padding:15px;
+        color:white;
+        
+       left:0;
+       top:15%;
+      font-size: 20px;
+       
+       
+    }
+    button{
+        
+        width:90%;
+        border-radius:10% ;
+        font-size: 20px;
+       
+    }
+    textarea:focus~label,
+textarea:valid~label{
+    top: -47px;
+    width: max-content;
+    font-size: 20px;
+
+}
+.lists {
+   
+    margin:56em 0em;
+}
+
+}

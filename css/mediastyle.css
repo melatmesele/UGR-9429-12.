@@ -1,0 +1,335 @@
+*{
+    box-sizing:border-box;
+}
+body{
+    background-image: url(../images/med.jpg);
+    background-size:cover;
+    background-attachment:fixed;
+}
+.all{
+    display:grid;
+    grid-template-rows: auto 70em 15em ;
+    grid-template-columns: minmax(25em , 1fr)  ;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer" ;
+}
+header{
+    grid-area:header;
+}
+main{
+    grid-area:main;
+}
+
+footer{
+    grid-area:footer;
+    background-color:black;
+}
+nav ul{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    text-decoration:none;
+}
+nav ul li{
+    display:inline-block;
+    
+    padding:0em 0.5em;
+    margin:0em 0em;
+    
+    list-style:none;
+    
+} 
+li{
+    font-size:30px;
+    line-height:60px;
+}
+nav ul li a{
+    text-decoration:none;
+    font-weight:bold;
+    font-size:30px;
+}
+nav ul li a:link{
+    color:darkslateblue;
+}
+nav ul li a:visited{
+    color:white;
+}
+nav ul li a:focus{
+    color:red;
+}
+nav ul li a:hover{
+    color:blue;
+}
+nav ul li a:active{
+    color:darksalmon;
+}
+/*.checkbox{
+    font-size:30px;
+    color:black;
+    float:left;
+    margin:0px 0px;
+}
+.menu{
+    width:30px;
+    float:left;
+    margin:25px  5px;
+    display:none;
+}
+#checkbutton{
+    display:none;
+}*/
+
+h1{
+    margin:5em 16em;
+    text-transform: uppercase;
+    
+    position: absolute;
+    
+}
+
+    .media{
+        width:1395px;
+        height:808px;
+        background:url(../images/myphoto.jpg);
+        margin:16em 5em;
+        animation: image 25s infinite;
+        position: absolute;
+        background-size:cover;
+    }
+@keyframes image{
+    25%{
+        background: url(../images/miedan.jpg);
+        background-size: cover;
+        
+       
+      
+
+    }
+    50%{
+        background: url(../images/cha.jpg);
+        background-size: cover;
+        
+        
+        
+
+    }
+    75%{
+        background: url(../images/kal.jpg);
+        background-size: cover;
+     
+        
+
+    }
+    100%{
+        background: url(../images/beti.jpg);
+        background-size: cover;
+       
+        
+
+    }
+    
+}
+.videos{
+    margin:76em 4em;
+    position:absolute;
+    width:500px;
+     height:500px;
+
+}
+.videos1{
+    margin:102em 54em;
+    position:absolute;
+    width:500px;
+     height:500px;
+
+
+}
+.media-icons img{
+    height:30px;
+    margin:20px;
+    cursor:pointer;
+    align-items:center;
+    border:1px solid;
+    border-radius:50%;
+    
+
+}
+
+.media-icons{
+    display:flex;
+    align-items:center;
+    text-align:center;
+    justify-content:center;
+}/*
+@media screen and (max-width:1024px){
+    h1{
+        margin:5em 10em;
+    }
+    
+}
+@media screen and (max-width:768px){
+    h1{
+       margin:4em 6em;
+    }
+}
+@media screen and (max-width:425px){
+    .all{
+        grid-template-rows: auto 168em 15em ;
+        }
+     
+    h1{
+        margin:4em 2em;
+    } 
+}
+@media screen and (max-width:375px){
+    .all{
+        grid-template-rows: auto 190em 15em ;
+        
+    }
+}
+@media screen and (max-width:320px){
+  
+    .all{
+        grid-template-rows: 15em 180em 15em ;
+        grid-template-columns: minmax(79em , 1fr)  ;
+    }
+    .videos1{
+        margin:114em 46em;
+    }
+    nav ul li a:link{
+        font-size: 36px;
+    }
+}*/
+@media screen and (min-width:400px){
+
+    nav ul li {
+        flex:none;
+    } 
+    nav ul {
+        flex-wrap: wrap;
+    }
+      nav ul{
+          justify-content: center;
+      } 
+      .media{
+        width:600px;
+        height:400px;
+        
+        margin:6em 0em;
+        
+    }
+    h1{
+        margin:1em 1em;
+       
+        
+    }
+    .videos{
+        margin:35em 0em;
+        width:100px;
+        height:100px;
+        
+    
+    }
+    .videos1{
+        margin:55em 0em;
+        width:100px;
+        height:100px;
+        
+    
+    }
+    
+    }
+    @media screen and (min-width:600px){
+
+          .media{
+            width:800px;
+            height:400px;
+            
+            margin:6em 0em;
+            
+        }
+        h1{
+            margin:1em 1em;
+           
+            
+        }
+        .videos{
+            margin:35em 0em;
+            width:200px;
+            height:100px;
+            
+        
+        }
+        .videos1{
+            margin:55em 0em;
+            width:200px;
+            height:100px;
+            
+        
+        }
+        
+        }
+        @media screen and (min-width:800px){
+
+            .media{
+                width:800px;
+                height:400px;
+                
+                margin:6em 0em;
+                
+            }
+            .videos{
+                margin:35em 6em;
+                width:500px;
+                height:400px;
+                
+            
+            }
+            .videos1{
+                margin:55em 6em;
+                width:500px;
+                height:400px;
+                
+            
+            }
+            h1{
+                margin:1em 6em;
+               
+                
+            }
+            
+            }
+            @media screen and (min-width:1400px){
+
+                .media{
+                    width:1000px;
+                    height:800px;
+                    
+                    margin:6em 0em;
+                    
+                }
+                .videos{
+                    margin:35em 66em;
+                    width:500px;
+                    height:400px;
+                    
+                
+                }
+                h1{
+                    margin:1em 18em;
+                   
+                    
+                }
+                
+                .videos1{
+                    margin:55em 66em;
+                    width:500px;
+                    height:400px;
+                    
+                
+                }
+                
+                }
+            
